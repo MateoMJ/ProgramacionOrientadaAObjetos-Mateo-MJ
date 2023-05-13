@@ -42,4 +42,14 @@ public class RecursosHuman extends Empleado implements Interviewer
     {
         System.out.println("Trabajando como recursos humanos");
     }
+
+    /**
+     * Permite comparar RecursosHumanos con empleados
+     * @param o the object to be compared.
+     * @return regresa 0
+     */
+    @Override
+    public int compareTo(Empleado o) {
+        return 0;
+    }
 }
