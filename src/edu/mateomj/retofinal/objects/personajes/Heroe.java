@@ -1,14 +1,25 @@
 package edu.mateomj.retofinal.objects.personajes;
 import java.util.Random;
 
+/**
+ * la clase que se encarga de la logica de pelea del jugador y otras cosas
+ */
+
 public class Heroe extends Luchador{
     Random randomSelect = new Random();
     public static int potion;
 
+    /**
+     * constructor default de heore objeto
+     */
+
     public Heroe() {
         super();
     }
-
+    /**
+     * todas los metodos estos de ataque se encargan de los ataques del mago
+     * @return
+     */
     @Override
     public int ataque1A(){
         int A1D1 = randomSelect.nextInt(1-4);

@@ -1,7 +1,13 @@
 package edu.mateomj.retofinal.ui;
 import java.util.*;
 
+/**
+ * Esta clase se encarga de la interaccion del usuario y el texto de cuando inicia el juego con el menu principal y esas cosas
+ */
 public class CLI_Setup {
+    /**
+     * menu de inicio del juego
+     */
 
     public static void menuInicio(){
 
@@ -30,6 +36,9 @@ public class CLI_Setup {
         }
     }
 
+    /**
+     * este metodo imprime la historia del juego
+     */
     public static void historiaInicial(){
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("Una villa cercana ha sido maldecida por un mago malvado que secuestro y robo el poder de muchas hadas");

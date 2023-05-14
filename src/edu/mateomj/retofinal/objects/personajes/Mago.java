@@ -1,13 +1,23 @@
 package edu.mateomj.retofinal.objects.personajes;
 import java.util.Random;
 
+/**
+ * Clase que se encarga de la logica y objeto mago
+ */
 public class Mago extends Luchador{
     Random randomSelect = new Random();
 
 
+    /**
+     * Constructor del objeto mago
+     */
     public Mago() {
         super();
     }
+    /**
+     * todas los metodos estos de ataque se encargan de los ataques del mago
+     * @return
+     */
     @Override
     public int ataque1A(){
         int A1D1 = randomSelect.nextInt(1-4);

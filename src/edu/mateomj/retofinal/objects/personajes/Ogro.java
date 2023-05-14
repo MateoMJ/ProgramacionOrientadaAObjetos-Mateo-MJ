@@ -1,12 +1,23 @@
 package edu.mateomj.retofinal.objects.personajes;
 import java.util.Random;
 
+/**
+ * Clase que tiene toda la logica del enemigo ogro
+ */
 public class Ogro extends Luchador {
     Random randomSelect = new Random();
 
+    /**
+     * constructor ogro
+     */
     public Ogro() {
         super();
     }
+
+    /**
+     * todas los metodos estos de ataque se encargan de los ataques del ogro
+     * @return
+     */
     @Override
     public int ataque1A(){
         int A1D1 = randomSelect.nextInt(1-3);

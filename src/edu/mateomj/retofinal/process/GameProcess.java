@@ -10,7 +10,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * clase que tiene toda la logica del juego
+ */
 public class GameProcess {
+    /**
+     * clase que pone los valores iniciales de los objetos declarados
+     */
 
     public static void objectInitialize(){
         Heroe.vidaMaxima =10;
@@ -22,6 +28,9 @@ public class GameProcess {
         playerHub();
     }
 
+    /**
+     * metodo que se encarga de cosas cuando estas en la villa
+     */
     public static void playerHub(){
         String playerInput;
 
@@ -54,6 +63,10 @@ public class GameProcess {
         playerHub();
 
     }
+
+    /**
+     * meotod que se encarga de la logica random de explorar la mazmorra
+     */
     public static void explorarMazmorra(){
         int incrementador =1;
         int decrementador =1;
@@ -91,6 +104,10 @@ public class GameProcess {
         }
 
     }
+
+    /**
+     * meotodo que deberia de encargarse de la pelea con el ogro que lamentablemente no funciono despues de como 8 intentos, se me acabo el tiempo
+     */
     public static void peleaOgro() {
         Random elementoRandom = new Random();
         Ogro Ogro1 = new Ogro();
