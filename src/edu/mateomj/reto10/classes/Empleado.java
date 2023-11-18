@@ -6,7 +6,7 @@ import java.util.Objects;
  * La clase abstracta base de empleado cuál se encarga de poner el metodo de trabajar para ser heredado
  * Todas las otras clases heredan fundamentos de esta clase
  */
-public abstract class Empleado
+public abstract class Empleado implements Comparable<Empleado>
 {
 
     public String nombre;

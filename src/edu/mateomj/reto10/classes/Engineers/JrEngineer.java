@@ -39,6 +39,7 @@ public class JrEngineer extends Empleado implements Programmer
         this.rfc = rfc;
     }
 
+
     /**
      *
      * El constructor a utilizar para construir un objeto tipo JrEngineer
@@ -84,4 +85,14 @@ public class JrEngineer extends Empleado implements Programmer
         {
             System.out.println("Manteniendo codigo bien documentado");
         }
+
+    /**
+     * El dato que permite comparar juniors con Empleados
+     * @param o the object to be compared.
+     * @return regresa 0
+     */
+    @Override
+    public int compareTo(Empleado o) {
+        return 0;
+    }
 }

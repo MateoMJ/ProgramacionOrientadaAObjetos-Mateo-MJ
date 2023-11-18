@@ -66,4 +66,12 @@ public class Manager extends Empleado implements Interviewer
     {
         System.out.println("Administrando a los trabajadores de la oficina");
     }
+
+    /**
+     * Metodo que permite comparar la clase Manager con la clase Empleado
+     */
+    @Override
+    public int compareTo(Empleado o) {
+        return 0;
+    }
 }
