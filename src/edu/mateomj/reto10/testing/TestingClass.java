@@ -5,16 +5,25 @@ import edu.mateomj.reto10.classes.Administracion.Ceo;
 import edu.mateomj.reto10.classes.Administracion.Manager;
 import edu.mateomj.reto10.classes.other.RecursosHuman;
 
+import java.util.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.IOException;
+
+
 /**
- * La Clase TestingClass se encarga de lo que es demostrar el funcionamiento del polimforsimo
+ * La Clase TestingClass se encarga de lo que es demostrar el funcionamiento de los retos 10 a 12
  */
 public class TestingClass
 {
     /**
-     * Pruebas crea los objetos de cada rol del diagrama
+     * Este es el metodo en donde se encuentran los contenidos de cada reto
      */
     public static void pruebas()
     {
+        //Aquí comienzan los contenidos del reto 10
+        System.out.println("----------------Contenidos Reto 10----------------");
         JrEngineer Junior1 = new JrEngineer();
         SnrEngineer Senior1 = new SnrEngineer();
         Manager Manager1 = new Manager();
@@ -25,6 +34,21 @@ public class TestingClass
         testempleado(Junior1,Senior1,Manager1,Ceo1,HR1);
         testinterview(Senior1,Manager1,HR1);
 
+        //Aqui comienzan los contenidos del reto 11
+        System.out.println("----------------Contenidos Reto 11----------------");
+        System.out.println("Juniors Almacenados en un array e impresos");
+        ArrayList<String> listajuniors = new ArrayList<>();
+
+        Path path = Paths.get("src/edu/mateomj/reto10/listaEngineers");
+        try {
+            List<String> lineasDelArchivo = Files.readAllLines(path);
+            listajuniors.addAll(lineasDelArchivo);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        System.out.println(listajuniors);
+
+        imprimirmayora20(listajuniors);
     }
 
     /**
@@ -70,6 +94,22 @@ public class TestingClass
         Manager1.entrevistar();
         Senior1.entrevistar();
         HR1.entrevistar();
+    }
+
+    /**
+     * Este metodo se encarga de imprimir los juniors que sean mayor a 20
+     * @param jrmayora20 El nuevo array que obtiene lo que contiene el array de listajuniors con todos los juniors del archivo
+     *
+     */
+    public static void imprimirmayora20(ArrayList<String> jrmayora20 ){
+        System.out.println("Juniors mayores a 20");
+        for (String empleado : jrmayora20 ) {
+            String[] splitter = empleado.split(";");
+            int edad = Integer.parseInt(splitter[2]);
+            if (edad > 20) {
+                System.out.println(empleado);
+            }
+        }
     }
 
 }
